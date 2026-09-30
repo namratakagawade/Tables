@@ -1,0 +1,157 @@
+/* ===== Font ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ===== Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+center {
+    display: block;
+}
+
+/* ===== Table ===== */
+table {
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 10px rgba(134, 10, 10, 0.08);
+    background: #ffffff;
+}
+
+/* ===== Title ===== */
+header h1 {
+    text-align: center;
+    padding: 20px 40px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: #1717c2;
+    letter-spacing: 0.5px;
+}
+
+/* ===== All Cells ===== */
+tr td,
+tr th {
+    padding: 13px 22px;
+    text-align: center;
+    font-size: 0.85rem;
+    border: 1px solid #d1d5db;
+    transition: background 0.2s ease;
+}
+
+/* ===== Time Slot Header Row ===== */
+tr:first-child th {
+    background: #803bcf;
+    color: #f0f0f0;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-color: #3d3d5c;
+}
+
+/* ===== Day Names ===== */
+tr:not(:first-child) th {
+    background: #f9fafb;
+    color: #1f2937;
+    font-weight: 600;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ===== Data Cells ===== */
+td {
+    background: #ffffff;
+    color: #374151;
+    font-weight: 400;
+}
+
+/* ===== Alternating Rows ===== */
+tr:nth-child(even) td {
+    background: #fafafa;
+}
+
+/* ===== Hover ===== */
+td:hover {
+    background: #f3f4f6 !important;
+    color: #111827;
+}
+
+tr:not(:first-child) th:hover {
+    background: #f3f4f6 !important;
+}
+
+/* ===== Lunch Break (rowspan) ===== */
+td[rowspan] {
+    background: #f9fafb !important;
+    color: #374151;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+}
+
+td[rowspan]:hover {
+    background: #f3f4f6 !important;
+}
+
+/* ===== Colspan Cells ===== */
+td[colspan] {
+    font-weight: 500;
+}
+
+/* ===== Footer (Holiday) ===== */
+footer tr th {
+    background: #1a1a2e;
+    color: #f0f0f0;
+    font-weight: 600;
+    font-size: 0.84rem;
+    padding: 15px 24px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-color: #3d3d5c;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1rem;
+        padding: 16px;
+    }
+
+    tr td,
+    tr th {
+        padding: 10px 12px;
+        font-size: 0.75rem;
+    }
+
+    td[rowspan] {
+        writing-mode: horizontal-tb;
+    }
+}
+
+/* ===== Load Animation ===== */
+table {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
